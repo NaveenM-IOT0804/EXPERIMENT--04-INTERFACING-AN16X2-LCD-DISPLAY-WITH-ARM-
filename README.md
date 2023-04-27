@@ -174,7 +174,7 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 ## STM 32 CUBE PROGRAM :
 ```c
-"main.h"
+#include "main.h"
 #include"lcd.h"
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -187,12 +187,14 @@ int main(void)
     Lcd_PinType pins[] = {GPIO_PIN_3, GPIO_PIN_2, GPIO_PIN_1, GPIO_PIN_0};
     Lcd_HandleTypeDef lcd;
     lcd = Lcd_create(ports, pins, GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1, LCD_4_BIT_MODE);
-    Lcd_cursor(&lcd, 0,1);
-    Lcd_string(&lcd, "SEC - SCOFT");
+    Lcd_cursor(&lcd, 0,5);
+    Lcd_string(&lcd, "NAVEEN M");
+    Lcd_cursor(&lcd, 1,7);
+    Lcd_string(&lcd, "212222110029");
   while (1)
   {
 	  for ( int x = 1; x <= 200 ; x++ )
-	  { Lcd_cursor(&lcd, 1,7);
+	  { Lcd_cursor(&lcd, 2,7);
 	  Lcd_int(&lcd, x);
 	  HAL_Delay (1000); }
   }
@@ -263,7 +265,8 @@ void assert_failed(uint8_t *file, uint32_t line)
  ![exp4_1](https://user-images.githubusercontent.com/117974950/234753308-b7498ff1-f9d6-4fab-8a89-0b1c9a0bbbcb.png)
 
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- [ex1.PDF](https://github.com/NaveenM-IOT0804/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/files/11339348/ex1.PDF)
+ ![exp4out](https://user-images.githubusercontent.com/117974950/234754349-1b75ca8b-97ee-45e4-908a-cd880a3d1b26.png)
+
 
  
 ## Result :
